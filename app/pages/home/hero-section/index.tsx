@@ -1,3 +1,5 @@
+'use client'
+
 import Button from "@/app/components/buttons";
 import TechBadge from "@/app/components/tech-badge";
 import Image from "next/image";
@@ -24,6 +26,14 @@ const MOCK_CONTACTS = [
 ];
 
 const HeroSection = () => {
+
+  const handleContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
@@ -40,7 +50,7 @@ const HeroSection = () => {
             ))}
           </div>
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="w-max shadow-button">
+            <Button className="w-max shadow-button" onClick={handleContact}>
               Entre em contato
               <HiArrowNarrowRight size={18} />
             </Button>
@@ -54,7 +64,7 @@ const HeroSection = () => {
           </div>
         </div>
         <Image width={420} height={404} src="/images/profile-pic.jpeg" alt="Foto de perfil do Jean Gomes"
-              className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover" />
+          className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover" />
       </div>
     </section>
   );

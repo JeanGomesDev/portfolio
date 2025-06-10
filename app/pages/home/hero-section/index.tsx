@@ -51,11 +51,13 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           </div>
         </div>
         <Image 
+        className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover"
         width={420}
         height={404}
+        // src={homeInfo.profilePicture.url}
         src="/images/profile-pic.jpeg" 
         alt="Foto de perfil do Jean Gomes"
-        className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover" />
+         />
       </div>
     </section>
   );

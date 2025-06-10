@@ -27,20 +27,32 @@ const getPageData = async (): Promise<HomePageData> => {
         name
         startDate
       }
-     }
+      highlightProjects {
+        slug
+        thumbnail {
+        url
+          }
+        title
+        shortDescription
+        technologies {
+            name
+          }
+        }
+      }
   }
 `
-  return fetchGygraphQuery(query, 60 * 60 * 24); 
+  return fetchGygraphQuery(query, 60 * 60 * 24);
 
 }
 
 export default async function Home() {
-  const {page: pageData} = await getPageData();
+  const { page: pageData } = await getPageData();
+  console.log("🚀 ~ Home ~ pageData:", pageData)
   return (
     <>
       <HeroSection homeInfo={pageData} />
-      <KnownTechs techs={pageData.knownTechs}/>
-      <HighlightedProjects />
+      <KnownTechs techs={pageData.knownTechs} />
+      <HighlightedProjects projects={pageData.highlightProjects} />
       <WorkExperience />
     </>
   );

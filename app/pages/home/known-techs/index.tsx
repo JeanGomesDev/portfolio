@@ -1,9 +1,9 @@
 import { SectionTitle } from "@/app/components/section-title";
 import KnownTech from "./known-tech";
-import { knownTech as IkknownTech } from "@/app/types/projects";
+import { knownTech as IknownTech } from "@/app/types/projects";
 
 type knownTechProps = {
-  techs: IkknownTech[]
+  techs: IknownTech[]
 }
 
 const knownTechs = ({ techs }: knownTechProps) => {

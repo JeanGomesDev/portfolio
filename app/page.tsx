@@ -3,7 +3,7 @@ import HighlightedProjects from "./pages/home/highlighted-projects";
 import KnownTechs from "./pages/home/known-techs";
 import WorkExperience from "./pages/home/work-experience";
 import { HomePageData } from "./types/page-info";
-import { fetchGygraphQuery } from "./utils/fetch-gygraph-query";
+import { fetchHygraphQuery } from "./utils/fetch-gygraph-query";
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
@@ -41,13 +41,12 @@ const getPageData = async (): Promise<HomePageData> => {
       }
   }
 `
-  return fetchGygraphQuery(query, 60 * 60 * 24);
+  return fetchHygraphQuery(query, 60 * 60 * 24);
 
 }
 
 export default async function Home() {
   const { page: pageData } = await getPageData();
-  console.log("🚀 ~ Home ~ pageData:", pageData)
   return (
     <>
       <HeroSection homeInfo={pageData} />

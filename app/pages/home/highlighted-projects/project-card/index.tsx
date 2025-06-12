@@ -17,7 +17,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <Image
           width={420}
           height={304}
-          // src="https://media.graphassets.com/FRhUdgUQTHmLmwf9u0BA"
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
           className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"

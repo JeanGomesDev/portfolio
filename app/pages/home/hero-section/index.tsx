@@ -32,8 +32,8 @@ const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             />
           </div>
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[540px]">
-            {homeInfo.technologies.map((tech) => (
-              <TechBadge name={tech.name} />
+            {homeInfo.technologies?.map((tech) => (
+              <TechBadge key={tech.name} name={tech.name} />
             ))}
           </div>
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">

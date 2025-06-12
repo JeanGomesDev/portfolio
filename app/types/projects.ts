@@ -1,5 +1,4 @@
-import type { RichTextContent } from "@graphcms/rich-text-types";
-
+import type { RichTextContent } from '@graphcms/rich-text-types'
 
 export type knownTech = {
     iconSvg: string;

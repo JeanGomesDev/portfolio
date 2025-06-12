@@ -17,7 +17,7 @@ const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
 
 
       <div>
-        {projects.map((project) => (
+        {projects?.map((project) => (
           <div key={project.slug}>
             <ProjectCard project={project} />
             <HorizontalDivider className="my-16" />

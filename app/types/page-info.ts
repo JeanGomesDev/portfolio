@@ -1,10 +1,11 @@
 import type { RichTextContent } from "@graphcms/rich-text-types";
 import { Project, knownTech } from "./projects";
+import { WorkExperience } from "./work-experience";
 
 export type Social = {
-    url: string;
-    iconSvg: string;
-}
+  url: string;
+  iconSvg: string;
+};
 
 export type HomePageInfo = {
   introduction: {
@@ -15,10 +16,11 @@ export type HomePageInfo = {
     url: string;
   };
   socials: Social[];
-    knownTechs: knownTech[];
-    highlightProjects: Project[];
+  knownTechs: knownTech[];
+  highlightProjects: Project[];
 };
 
 export type HomePageData = {
   page: HomePageInfo;
+  workExperiences: WorkExperience[];
 };

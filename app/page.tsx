@@ -3,7 +3,7 @@ import HighlightedProjects from "./pages/home/highlighted-projects";
 import KnownTechs from "./pages/home/known-techs";
 import WorkExperience from "./pages/home/work-experience";
 import { HomePageData } from "./types/page-info";
-import { fetchHygraphQuery } from "./utils/fetch-gygraph-query";
+import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `

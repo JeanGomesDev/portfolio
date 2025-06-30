@@ -1,4 +1,3 @@
-import React from 'react'
 import PageIntroduction from '../pages/projects/page-introduction'
 import ProjectsList from '../pages/projects/page-introduction/projects-list'
 import { ProjectsPageData } from '../types/page-info'
@@ -25,8 +24,7 @@ const getPageData = async (): Promise<ProjectsPageData> => {
   )
 }
 
-const Projects = async () => {
-
+export default async function Projects() {
   const { projects } = await getPageData()
 
   return (
@@ -37,4 +35,3 @@ const Projects = async () => {
   )
 }
 
-export default Projects

@@ -1,6 +1,5 @@
-import React from 'react'
-import ProjectCard from './project-card'
 import Link from 'next/link';
+import ProjectCard from './project-card'
 import { Project } from '@/app/types/projects';
 
 type ProjectsListProps = {
